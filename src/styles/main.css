@@ -1,0 +1,167 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --dark-blue: hsl(214, 17%, 51%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+    --grayish-blue: hsl(212, 23%, 69%);
+    --dark-grayish-blue: hsl(217, 19%, 35%);
+}
+
+body {
+    font-family: Manrope sans, sans-serif;
+    font-size: 1em;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-grayish-blue);
+
+    h1 {
+        display: none;
+    }
+}
+
+.article {
+    background-color: white;
+    margin: 6em 2em;
+    border-radius: 1em;
+    overflow: hidden;
+    box-shadow: 1em 1em 2em var(--grayish-blue);
+
+    picture img {
+        max-width: 100%;
+    }
+
+    h2 {
+        font-size: 1.2em;
+        margin-bottom: 1em;
+        line-height: 1.2em;
+    }
+
+    p {
+        font-size: 0.9em;
+        line-height: 1.5em;
+    }
+
+    .advice {
+        padding: 2em 2em 1.3em 2em;
+    }
+
+    #author {
+        margin: 1em 2em 1.2em 2em;
+        display: flex;
+        flex-direction: row;
+
+        .avatar {
+            width: 2.5em;
+            height: 2.5em;
+            border-radius: 50%;
+            margin-right: 1em;
+        }
+
+        address {
+            flex-grow: 2;
+            font-style: normal;
+
+            p {
+                font-weight: bolder;
+            }
+
+            time {
+                font-weight: 50;
+                font-size: 0.9em;
+            }
+        }
+
+        .share {
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            width: 2.5em;
+            height: 2.5em;
+            background-color: var(--light-grayish-blue);
+            color: var(--grayish-blue);
+            cursor: pointer;
+
+            svg {
+                padding: 0.5em;
+            }
+        }
+
+        &.show-socials {
+            display: none;
+            opacity: 0;
+        }
+    }
+
+    #socials {
+        padding: 1em 2em 1.2em 2em;
+        display: none;
+        align-items: center;
+        gap: 1em;
+        color: var(--light-grayish-blue);
+        background-color: var(--dark-grayish-blue);
+
+        .label {
+            letter-spacing: 0.6em;
+        }
+
+        .share {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            cursor: pointer;
+
+            svg {
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                width: 2.5em;
+                height: 2.5em;
+                --share-arrow: var(--light-grayish-blue);
+                background-color: var(--grayish-blue);
+                padding: 0.6em;
+            }
+        }
+
+        &.show-socials {
+            display: flex;
+            opacity: 1;
+        }
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        display: none;
+    }
+    to {
+        opacity: 1;
+        display: flex;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+        display: flex;
+    }
+    to {
+        opacity: 0;
+        display: none;
+    }
+}
+
+@media screen and (width <= 430px) {
+    main {
+    }
+}
