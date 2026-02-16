@@ -31,7 +31,7 @@ Desktop view with share popup visible.
 
 ### Links
 
-- Solution URL: 
+- Solution URL: https://github.com/FJSolutions/fm-article-preview-js
 - Live Site URL: 
 
 ## My process
