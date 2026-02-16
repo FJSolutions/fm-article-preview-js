@@ -32,7 +32,7 @@ Desktop view with share popup visible.
 ### Links
 
 - Solution URL: https://github.com/FJSolutions/fm-article-preview-js
-- Live Site URL: 
+- Live Site URL: https://fbj-fm-article-preview.netlify.app/
 
 ## My process
 
@@ -51,6 +51,8 @@ My initial implementation used JavaScript for wiring up button clicks and positi
 of the share menu. But then, I discovered the `popover` and `anchor` APIs (which have been widely 
 supported for two years at this time), and cghanged to using that. This meant that I was able to 
 completely implement the UI in `html` and `css`!
+
+I also learned about inlining small `svg`s into the `html`.
 
 On my journey towards a more disciplined and value-driven semantic HTML, I tried to think from the
 perspective of a screen reader about the markup: using `articles` for sections that could be stand-alone
