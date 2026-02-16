@@ -34,24 +34,24 @@
                 <p>Michelle Appleton</p>
                 <time>28 Jun 2020</time>
             </address>
-            <div class="share" id="show-share">
+            <button type="button" class="share" id="show-share" popovertarget="socials-popover">
                 <svg width="100%" height="100%" viewBox="0 0 15 13">
                     <use href="images/icon-share.svg"></use>
                 </svg>
-            </div>
-        </section>
-        <section id="socials">
-            <div class="label">SHARE</div>
-            <img src="images/icon-facebook.svg" alt="Facebook">
-            <img src="images/icon-twitter.svg" alt="Twitter">
-            <img src="images/icon-pinterest.svg" alt="Pinterest">
-            <div class="share" id="hide-share">
-                <svg width="100%" height="100%" viewBox="0 0 15 13">
-                    <use href="images/icon-share.svg"></use>
-                </svg>
-            </div>
+            </button>
         </section>
     </article>
 </main>
+<section id="socials-popover" popover>
+    <div class="label">SHARE</div>
+    <img src="images/icon-facebook.svg" alt="Facebook">
+    <img src="images/icon-twitter.svg" alt="Twitter">
+    <img src="images/icon-pinterest.svg" alt="Pinterest">
+    <button type="button" class="share" popovertarget="socials-popover" popovertargetaction="hide">
+        <svg width="100%" height="100%" viewBox="0 0 15 13">
+            <use href="images/icon-share.svg"></use>
+        </svg>
+    </button>
+</section>
 </body>
 </html>
